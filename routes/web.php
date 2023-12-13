@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ProdukController;
+use App\Http\Controllers\CheckoutController;
+use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\DashboardController;
 
 /*
@@ -19,3 +22,7 @@ Route::get('/', function () {
 });
 
 Route::resource('/dashboard', DashboardController::class);
+
+Route::resource('/produk', ProdukController::class);
+Route::resource('/checkout', CheckoutController::class);
+Route::resource('/kategori', KategoriController::class);

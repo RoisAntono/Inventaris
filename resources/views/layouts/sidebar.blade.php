@@ -3,7 +3,7 @@
   <div class="sidebar-brand-icon rotate-n-15">
       <i class="fas fa-laugh-wink"></i>
   </div>
-  <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+  <div class="sidebar-brand-text mx-3">Inventaris</div>
 </a>
 
 <!-- Divider -->
@@ -16,11 +16,25 @@
       <span>Dashboard</span></a>
 </li>
 
-<!-- Nav Item - Dashboard -->
+<!-- Nav Item - Produk -->
 <li class="nav-item {{ ($active === "produk") ? 'active' : '' }}">
   <a class="nav-link" href="/produk">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Produk</span></a>
+</li>
+
+<!-- Nav Item - Checkout -->
+<li class="nav-item {{ ($active === "checkout") ? 'active' : '' }}">
+  <a class="nav-link" href="/checkout">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Checkout</span></a>
+</li>
+
+<!-- Nav Item - Kategori -->
+<li class="nav-item {{ ($active === "kategori") ? 'active' : '' }}">
+  <a class="nav-link" href="/kategori">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Kategori</span></a>
 </li>
 
 <!-- Divider -->
