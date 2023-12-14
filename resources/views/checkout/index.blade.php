@@ -2,48 +2,52 @@
 
 @section('content')
 <!-- Page Heading -->
-<div class="d-sm-flex align-items-center justify-content-between mb-4">
-  <h1 class="h3 mb-0 text-gray-800">{{$title}}</h1>
-  <a href="/checkout/create" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">Barang Keluar</a>
-</div>
-    
-<!-- DataTales Example -->
-<div class="card shadow mb-4">
-  <div class="card-body">
-      <div class="table-responsive">
-          <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
-              <thead>
-                  <tr>
-                    <th>No</th>
-                    <th>Penerima</th>
-                    <th>Produk</th>
-                    <th>Jumlah</th>
-                    <th>Tanggal</th>
-                    <th>Action</th>
-                  </tr>
-              </thead>
-              <tbody>
-                  <tr>
-                      <td>Tiger Nixon</td>
-                      <td>System Architect</td>
-                      <td>Edinburgh</td>
-                      <td>61</td>
-                      <td>2011/04/25</td>
-                      <td>$320,800</td>
-                  </tr>
-              </tbody>
-              <tfoot>
-                <tr>
-                  <th>No</th>
-                  <th>Penerima</th>
-                  <th>Produk</th>
-                  <th>Jumlah</th>
-                  <th>Tanggal</th>
-                  <th>Action</th>
-                </tr>
-            </tfoot>
-          </table>
+<div class="page-heading mb-1">
+  <div class="page-title">
+      <div class="row">
+          <div class="col-12 col-md-6 order-md-1 order-last">
+              <h3>{{$title}}</h3>
+              <p class="text-subtitle text-muted">Navbar will appear on the top of the page.</p>
+          </div>
+          <div class="col-12 col-md-6 order-md-2 order-first">
+              <nav aria-label="breadcrumb" class="breadcrumb-header float-start float-lg-end">
+                  <ol class="breadcrumb">
+                      <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
+                      <li class="breadcrumb-item active" aria-current="page">Layout Vertical Navbar</li>
+                  </ol>
+              </nav>
+          </div>
       </div>
+  </div>
+</div>
+
+<!-- DataTales Example -->
+<div class="card">
+  <div class="card-body">
+    <div class="table-responsive">
+      <table class="table" id="table1">
+        <thead>
+          <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Phone</th>
+            <th>City</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Graiden</td>
+            <td>vehicula.aliquet@semconsequat.co.uk</td>
+            <td>076 4820 8838</td>
+            <td>Offenburg</td>
+            <td>
+              <span class="badge bg-success">Active</span>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </div>
 @endsection
