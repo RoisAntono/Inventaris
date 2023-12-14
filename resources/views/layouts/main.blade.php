@@ -11,6 +11,8 @@
     <!-- Datatables -->
     <link rel="stylesheet" href="{{asset("assets/extensions/datatables.net-bs5/css/dataTables.bootstrap5.min.css")}}">
     <link rel="stylesheet" href="{{asset("assets/compiled/css/table-datatable-jquery.css")}}">
+    <!-- Sweet Alert -->
+    <link rel="stylesheet" href="{{asset("assets/extensions/sweetalert2/sweetalert2.min.css")}}">
   </head>
   <body>
     <div id="app">
@@ -41,12 +43,20 @@
     <script src="{{asset("assets/static/js/components/dark.js")}}"></script>
     <script src="{{asset("assets/extensions/perfect-scrollbar/perfect-scrollbar.min.js")}}"></script>
     <script src="{{asset("assets/compiled/js/app.js")}}"></script>
-
-    <!-- Datatables Jquery-->
     <script src="{{asset("assets/extensions/jquery/jquery.min.js")}}"></script>
+
+    <!-- Datatables Jquery -->
     <script src="{{asset("assets/extensions/datatables.net/js/jquery.dataTables.min.js")}}"></script>
     <script src="{{asset("assets/extensions/datatables.net-bs5/js/dataTables.bootstrap5.min.js")}}"></script>
     <script src="{{asset("assets/static/js/pages/datatables.js")}}"></script>
+
+    <!-- Validation Form -->
+    <script src="{{asset("assets/extensions/parsleyjs/parsley.min.js")}}"></script>
+    <script src="{{asset("assets/static/js/pages/parsley.js")}}"></script>
+
+    <!-- Sweet Alert -->
+    <script src="{{asset("assets/extensions/sweetalert2/sweetalert2.min.js")}}"></script>
+    <script src="{{asset("assets/static/js/pages/sweetalert2.js")}}"></script>
 
     <!-- Support Script -->
     @yield('script')

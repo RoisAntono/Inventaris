@@ -3,7 +3,9 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Kategori;
 use Illuminate\Database\Seeder;
+use Illuminate\Foundation\Auth\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,5 +20,15 @@ class DatabaseSeeder extends Seeder
         //     'name' => 'Test User',
         //     'email' => 'test@example.com',
         // ]);
+
+        Kategori::create([
+            'kategori' => 'Elektronik'
+        ]);
+        Kategori::create([
+            'kategori' => 'ATK'
+        ]);
+        Kategori::create([
+            'kategori' => 'Lainnya'
+        ]);
     }
 }

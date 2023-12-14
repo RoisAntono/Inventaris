@@ -25,4 +25,9 @@ Route::resource('/dashboard', DashboardController::class);
 
 Route::resource('/produk', ProdukController::class);
 Route::resource('/checkout', CheckoutController::class);
-Route::resource('/kategori', KategoriController::class);
+
+Route::controller(KategoriController::class)->group(function() {
+    Route::resource('/kategori', KategoriController::class);
+    Route::get('/tambahkategori', [KategoriController::class, 'store'])->name('store');
+    Route::get('/hapuskategori/{id}', [KategoriController::class, 'destroy'])->name('destroy');
+});
