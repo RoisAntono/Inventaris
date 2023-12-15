@@ -16,7 +16,9 @@ class ProdukController extends Controller
     {
         return view('produk.index',[
             'title'     => 'Produk',
-            'active'    => 'produk'
+            'active'    => 'produk',
+            'produks'   => Produk::all(),
+            'kategoris' => Kategori::all()
         ]);
     }
 
@@ -25,12 +27,7 @@ class ProdukController extends Controller
      */
     public function create()
     {
-
-        return view('produk.create',[
-            'title'     => 'Tambah Produk',
-            'active'    => 'produk',
-            'kategoris' => Kategori::all()
-        ]);
+        //
     }
 
     /**
@@ -38,7 +35,15 @@ class ProdukController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'produk' => 'required|max:255',
+            'stock' => 'required|max:255',
+            'kategori_id' => 'required|max:255',
+        ]);
+
+        Produk::create($validatedData);
+
+        return redirect('/produk')->with('status', 'Data berhasil ditambah');
     }
 
     /**

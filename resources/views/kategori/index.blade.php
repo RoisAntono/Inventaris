@@ -52,7 +52,8 @@
       <div class="modal-header">
         <h5 class="modal-title" id="tambahkategoriTitle">Tambah Kategori</h5>
       </div>
-      <form class="form" action="/tambahkategori" data-parsley-validate>
+      <form class="form" action="/tambahkategori" method="POST" data-parsley-validate>
+        @csrf
         <div class="modal-body">
           <div class="modal-body">
               <div class="form-group mandatory">

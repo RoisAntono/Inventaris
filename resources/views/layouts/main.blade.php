@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="{{asset("assets/compiled/css/table-datatable-jquery.css")}}">
     <!-- Sweet Alert -->
     <link rel="stylesheet" href="{{asset("assets/extensions/sweetalert2/sweetalert2.min.css")}}">
+    <!-- Form Select Choices -->
+    <link rel="stylesheet" href="{{asset("assets/extensions/choices.js/public/assets/styles/choices.css")}}">
   </head>
   <body>
     <div id="app">
@@ -57,6 +59,10 @@
     <!-- Sweet Alert -->
     <script src="{{asset("assets/extensions/sweetalert2/sweetalert2.min.js")}}"></script>
     <script src="{{asset("assets/static/js/pages/sweetalert2.js")}}"></script>
+
+    <!-- Form Select Choices -->
+    <script src="{{asset("assets/extensions/choices.js/public/assets/scripts/choices.js")}}"></script>
+    <script src="{{asset("assets/static/js/pages/form-element-select.js")}}"></script>
 
     <!-- Support Script -->
     @yield('script')

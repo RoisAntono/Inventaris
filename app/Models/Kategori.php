@@ -10,4 +10,10 @@ class Kategori extends Model
     use HasFactory;
 
     protected $guarded = ['id'];
+
+    //Relasi tabel Produk
+    public function produk()
+    {
+        return $this->hasMany(Produk::class);
+    }
 }

@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Produk;
 use App\Models\Kategori;
 use Illuminate\Database\Seeder;
 use Illuminate\Foundation\Auth\User;
@@ -21,6 +22,11 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        Produk::create([
+            'produk' => 'Ngeptop',
+            'stock' => '5',
+            'kategori_id' => '1',
+        ]);
         Kategori::create([
             'kategori' => 'Elektronik'
         ]);
