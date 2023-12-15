@@ -23,13 +23,17 @@ Route::get('/', function () {
 
 Route::resource('/dashboard', DashboardController::class);
 
-Route::resource('/checkout', CheckoutController::class);
+Route::controller(CheckoutController::class)->group(function() {
+    Route::resource('/checkout', CheckoutController::class);
+    Route::post('/tambahcheckout', [CheckoutController::class, 'store'])->name('store');
+});
 
 Route::controller(ProdukController::class)->group(function() {
     Route::resource('/produk', ProdukController::class);
     Route::post('/tambahproduk', [ProdukController::class, 'store'])->name('store');
     Route::get('/hapusproduk/{id}', [ProdukController::class, 'destroy'])->name('destroy');
 });
+
 Route::controller(KategoriController::class)->group(function() {
     Route::resource('/kategori', KategoriController::class);
     Route::post('/tambahkategori', [KategoriController::class, 'store'])->name('store');

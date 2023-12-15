@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string("jumlah");
             $table->string("pelanggan");
+            $table->foreignId("produk_id");
             $table->timestamps();
         });
     }

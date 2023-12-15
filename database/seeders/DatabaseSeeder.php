@@ -27,6 +27,11 @@ class DatabaseSeeder extends Seeder
             'stock' => '5',
             'kategori_id' => '1',
         ]);
+        Produk::create([
+            'produk' => 'HaPeh',
+            'stock' => '8',
+            'kategori_id' => '1',
+        ]);
         Kategori::create([
             'kategori' => 'Elektronik'
         ]);

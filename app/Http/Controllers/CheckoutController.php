@@ -16,7 +16,9 @@ class CheckoutController extends Controller
     {
         return view('checkout.index',[
             'title'     => 'Checkout',
-            'active'    => 'checkout'
+            'active'    => 'checkout',
+            'checkouts' => Checkout::all(),
+            'produks'   => Produk::all()
         ]);
     }
 
@@ -25,11 +27,7 @@ class CheckoutController extends Controller
      */
     public function create()
     {
-        return view('checkout.create',[
-            'title'     => 'Barang Keluar',
-            'active'    => 'checkout',
-            'produks'   => Produk::all()
-        ]);
+        //
     }
 
     /**
@@ -37,7 +35,26 @@ class CheckoutController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validatedData = $request->validate([
+            'jumlah' => 'required|max:255',
+            'pelanggan' => 'required|max:255',
+            'produk_id' => 'required',
+        ]);
+
+        $stockproduk = Produk::find($request->produk_id);
+
+        if($stockproduk->stock < $request->jumlah)
+        {
+            return redirect('/checkout')->with('status', 'Mohon maaf, Stock produk tidak mencukupi');
+        }else
+        {
+            $stockproduk->stock -= $request->jumlah;
+            $stockproduk->save();
+        }
+
+        Checkout::create($validatedData);
+
+        return redirect('/checkout')->with('status', 'Data berhasil ditambah');
     }
 
     /**

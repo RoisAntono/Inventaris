@@ -31,7 +31,14 @@
           @foreach ($produks as $produk)
             <tr>
               <td>{{$produk->produk}}</td>
-              <td>{{$produk->kategori->kategori}}</td>
+
+              <!-- Kategori Selection -->
+              @if ($produk->kategori)
+                <td>{{$produk->kategori->kategori}}</td>
+              @else
+                <td>Tidak Memiliki Kategori</td>
+              @endif
+              
               <td>{{$produk->stock}}</td>
               <td>
                 <span class="badge bg-success">Active</span>

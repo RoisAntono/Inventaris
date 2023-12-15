@@ -11,9 +11,15 @@ class Produk extends Model
 
     protected $guarded =['id'];
 
-    //Relasi tabel Pemasok
+    //Relasi tabel kategori
     public function kategori()
     {
         return $this->belongsTo(Kategori::class);
+    }
+
+    //Relasi tabel Checkout
+    public function checkout()
+    {
+        return $this->hasMany(Checkout::class);
     }
 }
